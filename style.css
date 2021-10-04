@@ -1,0 +1,8 @@
+h1 {
+    background-image: url("img/code-pourron.jpg");
+    background-size: cover;
+    color: white;
+    text-align: center;
+    background-repeat: no-repeat;
+    line-height: 200px;
+}
