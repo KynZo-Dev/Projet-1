@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Développeur KynZo</title>
+    <title> Contact Développeur KynZo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Mon site de développeur KynZo">
     <!-- Include style.css -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="contactstyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
     <!-- Bootstrap CDN CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
   <body>
-    <header>
-      <h1>Développeur KynZo</h1>
+    <header class="header">
+      <h1 class="h1">Développeur KynZo</h1>
     </header>
     <!-- Bar de menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation">
@@ -20,13 +22,13 @@
         <ul class="navbar-nav mr-auto">
           <!-- Elements du menu -->
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Acceuil</a>
+            <a class="nav-link" href="../index.html">Projets</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Projets/index.html">Projets</a>
+            <a class="nav-link" href="CV/index.html">CV</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Contact/index.html">Contact</a>
+            <a class="nav-link active" href="Contact/index.html">Contact</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -36,83 +38,30 @@
       </div>
     </nav>
     <main>
-      <div class="row">
-        <!-- Titre des cartes -->
-        <h2 class="col-12">Mes Projets</h2>
-        <div class="col-4">
-          <!-- 1er cartes -->
-          <div class="card">
-            <!-- Image de la 1er carte -->
-            <img src="#" class="card-img-top" alt="Projet N°1">
-            <!-- corp de la 1er carte -->
-            <div class="card-body">
-              <!-- Titre de la 1er carte -->
-              <div class="card-title">
-                <h3>Mon site avec HTML / Bootstrap</h3>
-                <!-- Barre de progrès de la 1er carte -->
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                    50%
-                  </div>
-                </div>
-                <!-- Text de la 1er carte -->
-                <p class="card-text">
-                  blablabla
-                </p>
-                <!-- Bouton de la 1er carte -->
-                <a href="#" class="btn btn-secondary">Lire la suite...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <!-- 2em cartes -->
-          <div class="card">
-            <!-- Image de la 2em carte -->
-            <img src="#" class="card-img-top" alt="Projet N°2">
-            <!-- corp de la 2em carte -->
-            <div class="card-body">
-              <!-- Titre de la 2em carte -->
-              <div class="card-title">
-                <h3>Mon site avec PHP / Symfony</h3>
-                <!-- Barre de progrès de la 2em carte -->
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                    20%
-                  </div>
-                </div>
-                <!-- Text de la 2em carte -->
-                <p class="card-text">
-                  bla2bla2bla2
-                </p>
-                <!-- Bouton de la 2em carte -->
-                <a href="#" class="btn btn-secondary">Lire la suite...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <!-- 3em cartes -->
-          <div class="card">
-            <img src="#" class="card-img-top" alt="Projet N°3">
-            <div class="card-body">
-              <div class="card-title">
-                <h3>Application du Service GRTI</h3>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                    60%
-                  </div>
-                </div>
-                <p>
-                  bla3bla3bla3
-                </p>
-                <a href="#" class="btn btn-secondary">Lire la suite</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="contact-wrapper">
+        <form class="form-horizontal" method="post" action="contact.php">
+          <h1 class="section-header">Posez-nous vos questions !</h1>
+  
+          <label for="name">Nom</label>
+          <input type="text" id="name" placeholder="nom" name="name" required>
+          
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="email@mail.com" name="email" required>
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" placeholder="0600000000" name="phone">
+          <label for="category">Catégorie de question</label>
+          <select id="category" name="category">
+            <option value="default">Choisissez une catégorie</option>
+            <option value="help">Aide</option>
+            <option value="pro-contact">Contact professionnel</option>
+          </select>
+          <label for="message">Message</label>
+          <textarea rows="10" id="message" name="message" required></textarea>
+          <button class="send-button" id="submit" type="submit">Envoyer</button>
+        </form>
       </div>
-    <footer>      
+    </main>
+    <footer>
       <p>Tous droits réservés</p>
     </footer>
     <!-- jQuery CDN -->
