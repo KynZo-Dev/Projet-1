@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Contact Développeur KynZo</title>
+    <title>Développeur KynZo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Mon site de développeur KynZo">
     <!-- Include style.css -->
-    <link rel="stylesheet" type="text/css" href="contactstyle.css">
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="projet3style.css">
     <!-- Bootstrap CDN CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
@@ -22,13 +21,16 @@
         <ul class="navbar-nav mr-auto">
           <!-- Elements du menu -->
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">Projets</a>
+            <a class="nav-link" href="../../index.html">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="CV/index.html">CV</a>
+            <a class="nav-link active" href="../projets.html">Projets</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="Contact/index.html">Contact</a>
+            <a class="nav-link" href="../../CV/cv.html">Cv</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../Contact/contact.html">Contact</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -38,28 +40,7 @@
       </div>
     </nav>
     <main>
-      <div class="contact-wrapper">
-        <form class="form-horizontal" method="post" action="contact.php">
-          <h1 class="section-header">Posez-nous vos questions !</h1>
-  
-          <label for="name">Nom</label>
-          <input type="text" id="name" placeholder="nom" name="name" required>
-          
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="email@mail.com" name="email" required>
-          <label for="phone">Téléphone</label>
-          <input type="tel" id="phone" placeholder="0600000000" name="phone">
-          <label for="category">Catégorie de question</label>
-          <select id="category" name="category">
-            <option value="default">Choisissez une catégorie</option>
-            <option value="help">Aide</option>
-            <option value="pro-contact">Contact professionnel</option>
-          </select>
-          <label for="message">Message</label>
-          <textarea rows="10" id="message" name="message" required></textarea>
-          <button class="send-button" id="submit" type="submit">Envoyer</button>
-        </form>
-      </div>
+      
     </main>
     <footer>
       <p>Tous droits réservés</p>
